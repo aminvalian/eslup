@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: abb9652d721b584438a9089cb83c8718
+timeCreated: 1443397616
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: datafall_0
+    21300002: datafall_100
+    21300004: datafall_101
+    21300006: datafall_102
+    21300008: datafall_103
+    21300010: datafall_104
+    21300012: datafall_105
+    21300014: datafall_106
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: datafall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 695
+        height: 1108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: datafall_100
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 552
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: datafall_101
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 530
+        width: 104
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: datafall_102
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 346
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: datafall_103
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 253
+        width: 170
+        height: 171
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: datafall_104
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 370
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: datafall_105
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 133
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: datafall_106
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 121
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
