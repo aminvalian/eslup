@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Advertisements;
+//using UnityEngine.Advertisements;
 
 public class OSpawnScript : MonoBehaviour {
 	public int health;
@@ -50,9 +50,9 @@ public class OSpawnScript : MonoBehaviour {
 	IEnumerator OnTriggerEnter2D (Collider2D collider){
 		if (collider.tag == "Pulse"){
             //		health --;      ????????
-            if (Advertisement.IsReady() && data.level % 5 == 0)
+            if (/*Advertisement.IsReady() &&*/ data.level % 5 == 0)
             {
-                Advertisement.Show();
+                //Advertisement.Show();
             }
 			winAnnouncer.winLevel = true;
 			winAnnouncer.winTime = winAnnouncer.time;
