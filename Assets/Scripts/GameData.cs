@@ -43,7 +43,7 @@ public class GameData : MonoBehaviour {
 			}
 		}
 		refreshRecords();
-
+        Debug.Log("saved");
 	}
 	public void refreshRecords(){
 		records.Clear();
