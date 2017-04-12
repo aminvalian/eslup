@@ -10,9 +10,7 @@ public class PulseScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (transform.position.y > 5f){
-			Destroy(this.gameObject,2f);
-		}
+		
 	}
 
 }

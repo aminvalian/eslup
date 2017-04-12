@@ -22,7 +22,7 @@ public class BlockCollidingWithPulse : MonoBehaviour {
 			collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			GameObject.Find("Canvas").SetActive(false);
 			GameObject.Find("EventSystem").SetActive(false);
-			winAnnouncer.loseLevel = true;
+			winAnnouncer.timedOut = true;
 			//audio.PlayOneShot (pulseHittingBlock1,0.7f);
 			GameObject.Find("GameData").GetComponent<GameData>().refreshRecords();
 			StartCoroutine(startAfterOneSec());

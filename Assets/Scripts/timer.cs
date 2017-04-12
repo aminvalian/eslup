@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class timer : MonoBehaviour {
 	public Text timerLabel;
 	public float time = 10.00f;
 	public float winTime;
 	public bool winLevel;
-	public bool loseLevel;
-	public Text winTimeText;
+	public bool timedOut;
+    public bool pulseReleased;
+    public int signals;
+    public Text winTimeText;
 
 	void Start(){
 		winLevel = false;
-		loseLevel = false;
+		timedOut = false;
 	}
 
 
@@ -27,15 +30,18 @@ public class timer : MonoBehaviour {
 		} 
 
 		else {
-			if (time <= 0 && !loseLevel) {
+			if (time < 0 && !timedOut && !GameObject.FindWithTag("Pulse")) {
 				GameObject.Find("Canvas").SetActive(false);
 				GameObject.Find("EventSystem").SetActive(false);
-				Application.LoadLevelAdditive ("LosePage");
-				loseLevel = true;
+                SceneManager.LoadScene("LosePage", LoadSceneMode.Additive);
+				timedOut = true;
 				Destroy(GameObject.FindWithTag("Pulse"));
 			}
 			else {
-				time -= Time.deltaTime;
+                if(time >= 0)
+				    time -= Time.deltaTime;
+                if (time < 0)
+                    time = 0;
 				timerLabel.text = TimeToString(time);
 
 //				float minutes = time / 60; //Divide the guiTime by sixty to get the minutes.
@@ -51,23 +57,21 @@ public class timer : MonoBehaviour {
 
 	public string TimeToString(float timee){
 		string timeText;
-		float minutes = timee / 60; //Divide the guiTime by sixty to get the minutes.
 		float seconds = timee % 60;//Use the euclidean division for the seconds.
 		float fraction = (timee * 100) % 100;
-		timeText = string.Format ("{0:00} : {1:00} : {2:000}", minutes, seconds, fraction);
+		timeText = string.Format ("{0:00} : {1:00}", seconds, fraction);
 		return timeText;
 	}
 
 
 	public void LoadMainMenu()
 	{
-	
-		Application.LoadLevel ("MainMenu");
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
 	}
 
 	public void RestartLevel()
 	{
-		Application.LoadLevel (Application.loadedLevel);
-	}
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
 }

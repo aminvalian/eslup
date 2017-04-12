@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 //using UnityEngine.Advertisements;
 
 public class OSpawnScript : MonoBehaviour {
 	public int health;
 	public GameObject oPulse;
-	public GameData data;
 	public timer winAnnouncer;
 
 	void Start () {
-		data = GameObject.Find("GameData").GetComponent<GameData>();
 //		health = 5;
 	}
 
@@ -47,27 +46,7 @@ public class OSpawnScript : MonoBehaviour {
 //		}
 //	}
 
-	IEnumerator OnTriggerEnter2D (Collider2D collider){
-		if (collider.tag == "Pulse"){
-            //		health --;      ????????
-            if (/*Advertisement.IsReady() &&*/ data.level % 5 == 0)
-            {
-                //Advertisement.Show();
-            }
-			winAnnouncer.winLevel = true;
-			winAnnouncer.winTime = winAnnouncer.time;
-			data.saveRecord(winAnnouncer.winTime);
-			Destroy(collider.gameObject);
-			print (winAnnouncer.winTime);
-			data.currentWinRecord = winAnnouncer.TimeToString(winAnnouncer.winTime);
-			GameObject.Find("Canvas").SetActive(false);
-			GameObject.Find("EventSystem").SetActive(false);
-			yield return new WaitForSeconds(.0f);
-			Application.LoadLevelAdditive ("WinPage");
-
-			Destroy (gameObject.gameObject);
-		}
-	}
+	
 
 
 }

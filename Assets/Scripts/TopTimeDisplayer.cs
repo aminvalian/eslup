@@ -2,11 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TopTimeDisplayer : MonoBehaviour {
 	public GameData data;
-//	public timer time;
-	public List<Text> topTime = new List<Text>();
+    public List<Text> topTime = new List<Text>();
     public GameObject nextLevel;
 	void Start () {
 
@@ -33,7 +33,7 @@ public class TopTimeDisplayer : MonoBehaviour {
 
 	public void LoadMainMenu()
 	{
-		Application.LoadLevel ("MainMenu");
+		SceneManager.LoadScene ("MainMenu");
 
 	}
 
@@ -43,7 +43,7 @@ public class TopTimeDisplayer : MonoBehaviour {
 			data.level +=6;
 		else 
 			data.level++;
-		Application.LoadLevel (Application.loadedLevel + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 	}
 
 }

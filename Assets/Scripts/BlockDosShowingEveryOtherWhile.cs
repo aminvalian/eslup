@@ -19,7 +19,7 @@ public class BlockDosShowingEveryOtherWhile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		nextActionTime += Time.deltaTime;
-		if (nextActionTime > period && !GameObject.Find("Main Camera").GetComponent<timer>().loseLevel) {
+		if (nextActionTime > period ) {
 			nextActionTime = 0;
 			blockDos1.SetActive ( !blockDos1.activeSelf);
 			blockDos2.SetActive (setActiveStats);
